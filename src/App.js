@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 // import Greet from './components/greet';
 // import Welcome from './components/Welcome';
 // import Hello from './components/Hello';
@@ -12,7 +13,13 @@ import React, { Component } from 'react';
 // import EventBind from './components/EventBind';
 // import ChildComponent from './components/ChildComponent';
 // import ParentComponent from './components/ParentComponent';
-import Login from './components/login' 
+import Login from './components/login';
+// import ConditionalRender from './components/ConditionalRender'
+// import NameList from './components/NameList'
+import ContactUs from './components/ContactUs';
+import About from './components/About';
+
+
 
 // import { re  z nder } from '@testing-library/react';
 
@@ -24,17 +31,39 @@ class App extends Component {
 
   render() {
     return (
-     
-      <div style={{backgroundColor:'#0f09'}} className="App">
-        <Login />
-        {/* <ParentComponent /> */}
-        {/* <EventBind /> */}
-        {/* <Story /> */}
-       
-        {/* <Message /> */}
-        {/* <Counter /> */}
-        {/* <Greet age="18" sendToParent1={this.getDataFromChild11} name="Akash" heroName="Iron Man" /> */}
-        {/* <Greet name="Sam" heroName="Batman">
+      <Router>
+        <div>
+          <nav>
+          
+          <Link className='nav-links' to="/">Home </Link>
+          <Link className='nav-links' to="/about">About </Link>
+          <Link className='nav-links' to="/contact">ContactUs </Link>
+          <Link className='nav-links' to="/login">Login </Link>
+          </nav>
+
+
+          {/* <Navigation /> */}
+
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <Route path='/about' component={About} />
+            <Route path='/contact' component={ContactUs} />
+            <Route path='/login' component={Login} />
+          </Switch>
+
+
+
+          {/* <NameList /> */}
+          {/* <ConditionalRender /> */}
+          {/* <Login /> */}
+          {/* <ParentComponent /> */}
+          {/* <EventBind /> */}
+          {/* <Story /> */}
+
+          {/* <Message /> */}
+          {/* <Counter /> */}
+          {/* <Greet age="18" sendToParent1={this.getDataFromChild11} name="Akash" heroName="Iron Man" /> */}
+          {/* <Greet name="Sam" heroName="Batman">
           <p>This is children props</p>
         </Greet>
         <FunctionClick />
@@ -42,13 +71,19 @@ class App extends Component {
         <ClassClick /> */}
 
 
-        {/* <Hello /> */}
-        {/* <Greet name="Amee"/>
+          {/* <Hello /> */}
+          {/* <Greet name="Amee"/>
         <Greet name="Shubham"/> */}
-      </div>
-      
+        </div>
+      </Router>
+
     );
   }
 }
+const Home = () => (
+  <div>
+    <h1>Home page</h1>
+  </div>
+);
 
 export default App;
