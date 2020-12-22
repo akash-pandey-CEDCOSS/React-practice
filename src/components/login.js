@@ -53,7 +53,7 @@ class Login extends Component {
             return <Redirect to={this.state.redirect} />
         }
         return (
-            <div>
+            <div className='form-div'>
                 <h1 className='login'>Login Form</h1>
                 <form onSubmit={this.handleSubmit}>
                     <input className='input_1' type='text' value={this.state.username} placeholder='Username' onChange={this.userChange}></input>

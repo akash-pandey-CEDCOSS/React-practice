@@ -34,11 +34,11 @@ class App extends Component {
       <Router>
         <div>
           <nav>
-          
-          <Link className='nav-links' to="/">Home </Link>
-          <Link className='nav-links' to="/about">About </Link>
-          <Link className='nav-links' to="/contact">ContactUs </Link>
-          <Link className='nav-links' to="/login">Login </Link>
+
+            <Link className='nav-links' to="/">Home </Link>
+            <Link className='nav-links' to="/about">About </Link>
+            <Link className='nav-links' to="/contact">ContactUs </Link>
+            <Link className='nav-links' to="/login">Login </Link>
           </nav>
 
 
@@ -82,7 +82,7 @@ class App extends Component {
 }
 const Home = () => (
   <div>
-    <h1>Home page</h1>
+    <h2>Home page</h2>
   </div>
 );
 

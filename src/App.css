@@ -1,27 +1,57 @@
 .App {
   text-align: center;
 }
-.login{
-  background-color:  rgb(73,79,82);
+
+.login {
+  background-color: rgb(73, 79, 82);
   color: white;
   padding: 20px;
+  text-align: center;
+  margin: auto;
 }
 
-
-nav{
+nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
-  background-color: rgb(73,79,82);
+  background-color: rgb(118, 141, 153);
   color: white;
 }
-.nav-links{
-  display: flex;
-  width: 30%;
-  justify-content: space-around;
+
+.form-div {
   align-items: center;
+  margin: auto;
+  justify-content: center;
+  width: 400px;
+  background: rgb(73, 79, 82);
+  height: 400px;
+}
+
+input {
+  display: flex;
+  margin: auto;
+}
+
+h2, p {
+  text-align: center;
+}
+
+.selected {
+  background-color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  width: 100px;
+  height: 50px;
+  justify-content: space-evenly;
+  align-items: right;
   list-style: none;
   text-decoration: none;
   color: white;
+}
+
+.nav-links:hover {
+  background-color: rgb(176, 176, 230);
 }
