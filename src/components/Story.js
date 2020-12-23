@@ -50,25 +50,30 @@ class Story extends Component {
 
         return (
             <>
+                
+                <form className='form-story'>
                 <h1>Word count</h1>
-                <form>
                     <label>
                         Start typing :
                    <textarea type="text" value={this.state.message} name="name" onChange={this.changeHandler} />
                     </label>
-                    <input type="submit" name="submit" />
+                    
                 </form>
 
                 <p>{this.state.message} </p>
                 {/* <p>{this.state.count}</p> */}
                 <table>
+                    <tr>
+                        <th>Word</th>
+                        <th>Count</th>
+                    </tr>
                     {
                         Object.keys(dict).map((e) => {
                             return <tr>
                                 <td>
-                                    <h5>
+                                   
                                         {e}
-                                    </h5>
+                                   
                                 </td>
                                 <td>{dict[e]}</td>
                             </tr>

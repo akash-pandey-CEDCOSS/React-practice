@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 // import Counter from './components/Counter';
 // import FunctionClick from './components/FunctionClick';
 // import ClassClick from './components/ClassClick';
-// import Story from './components/Story';
+import Story from './components/Story';
 // import EventBind from './components/EventBind';
 // import ChildComponent from './components/ChildComponent';
 // import ParentComponent from './components/ParentComponent';
@@ -18,9 +18,6 @@ import Login from './components/login';
 // import NameList from './components/NameList'
 import ContactUs from './components/ContactUs';
 import About from './components/About';
-
-
-
 // import { re  z nder } from '@testing-library/react';
 
 class App extends Component {
@@ -37,6 +34,7 @@ class App extends Component {
 
             <Link className='nav-links' to="/">Home </Link>
             <Link className='nav-links' to="/about">About </Link>
+            <Link className='nav-links' to="/story">Story </Link>
             <Link className='nav-links' to="/contact">ContactUs </Link>
             <Link className='nav-links' to="/login">Login </Link>
           </nav>
@@ -47,8 +45,10 @@ class App extends Component {
           <Switch>
             <Route path='/' exact component={Home} />
             <Route path='/about' component={About} />
+            <Route path='/story' component={Story} />
             <Route path='/contact' component={ContactUs} />
             <Route path='/login' component={Login} />
+
           </Switch>
 
 
@@ -80,6 +80,7 @@ class App extends Component {
     );
   }
 }
+
 const Home = () => (
   <div>
     <h2>Home page</h2>

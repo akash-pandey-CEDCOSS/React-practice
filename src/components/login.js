@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-
-
 class Login extends Component {
+
     constructor(props) {
         super(props)
         this.state = {
@@ -37,14 +36,16 @@ class Login extends Component {
                 if (result.success === true) {
                     this.setState({
                         message: 'login success',
-                        redirect: '/About'
+                        redirect: '/Story'
                     })
+
                 } if (result.success === false) {
                     this.setState({
                         message: 'login failed'
                     })
                 }
             })
+
     }
     render() {
 
